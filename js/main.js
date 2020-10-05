@@ -13,16 +13,8 @@ function toggleMenu() {
     navItems.forEach(item => item.classList.toggle('open'));
 }
 
-window.addEventListener('scroll', () => {
-    const navHeight = nav.getBoundingClientRect().height;
-    const scrollHeight = window.pageYOffset;
-    const menuLinks = document.querySelectorAll('.menu-nav_link'); 
-    if (scrollHeight > navHeight ) {
-        menuNav.style.background = "#fff";
-        menuLinks.forEach(link => link.style.color = "#2e2e2e");
-    } else {
-        menuNav.style.background = "transparent";
-        menuLinks.forEach(link => link.style.color = "#fff");
-    }
-});
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    preloader.classList.toggle('hide-preloader'); 
+})
 

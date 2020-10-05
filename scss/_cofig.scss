@@ -7,6 +7,7 @@ $secondary-color: #ff652f;
     box-sizing: border-box;
 }
 
+
 @mixin transition-ease  {
     transition: all 1s ease-in-out ;
 }
@@ -16,6 +17,18 @@ $secondary-color: #ff652f;
         @return #000;
     } @else {
         @return #fff;
+    }
+}
+
+@mixin  media-sm {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
+
+@mixin  media-sm2 {
+    @media screen and (min-width: 350px) {
+        @content;
     }
 }
 
